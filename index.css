@@ -1,0 +1,61 @@
+@import 'tailwindcss/tailwind.css';
+
+body {
+  @apply font-montserrat;
+}
+
+@font-face {
+  font-family: 'MontserratBold';
+  src:
+    url('./src/assets/fonts/montserrat-bold-webfont.woff2') format('woff2'),
+    url('./src/assets/fonts/montserrat-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratMedium';
+  src:
+    url('./src/assets/fonts/montserrat-medium-webfont.woff2') format('woff2'),
+    url('./src/assets/fonts/montserrat-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratRegular';
+  src:
+    url('./src/assets/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+    url('./src/assets/fonts/montserrat-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratSemiBold';
+  src:
+    url('./src/assets/fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+    url('./src/assets/fonts/montserrat-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'apple_garamondbold_italic';
+  src:
+    url('./src/assets/fonts/applegaramond-bolditalic-webfont.woff2')
+      format('woff2'),
+    url('./src/assets/fonts/applegaramond-bolditalic-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: italic; /* Use 'italic' if the font is italic */
+}
+
+@font-face {
+  font-family: 'apple_garamonditalic';
+  src:
+    url('./src/assets/fonts/applegaramond-italic-webfont.woff2') format('woff2'),
+    url('./src/assets/fonts/applegaramond-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic; /* Use 'italic' if the font is italic */
+}

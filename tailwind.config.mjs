@@ -13,6 +13,14 @@ export default {
         textColor: '#4E3876',
         textColor80: 'rgba(77, 55, 118, 0.8)',
         background: '#FEFDFE'
+      },
+      fontFamily: {
+        montserrat: ['MontserratRegular', 'sans-serif'],
+        montserratBold: ['MontserratBold', 'sans-serif'],
+        montserratMedium: ['MontserratMedium', 'sans-serif'],
+        montserratSemiBold: ['MontserratSemiBold', 'sans-serif'],
+        garamondBold: ['apple_garamondbold_italic', 'serif'],
+        garamond: ['apple_garamonditalic', 'serif']
       }
     }
   },

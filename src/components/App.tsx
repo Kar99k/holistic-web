@@ -1,5 +1,12 @@
+import NavbarComponent from './organisms/NavbarComponent'
+import HeroSection from './organisms/HeroSection'
 function App() {
-  return <div className="relative overflow-hidden bg-white">Yov sdfsf</div>
+  return (
+    <>
+      <NavbarComponent />
+      <HeroSection />
+    </>
+  )
 }
 
 export default App
