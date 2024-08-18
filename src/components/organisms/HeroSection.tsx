@@ -1,5 +1,5 @@
 import PrimaryButton from 'components/atoms/PrimaryButton'
-import HeroImage from '../assets/Pic/HeroSection.png'
+import HeroImage from '../../assets/Pic/HeroSection.png'
 
 export default function HeroSection() {
   return (
