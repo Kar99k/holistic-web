@@ -2,9 +2,10 @@ import SectionHeader from 'components/molecules/SectionHeader'
 import ProPic from '../../assets/Pic/ProPic.png'
 export default function AboutMe() {
   return (
-    <div className="flex max-w-[1440px] flex-col gap-6 md:h-[380px] md:w-full md:p-7">
+    <div className="flex max-w-[1440px] flex-col gap-6 md:p-7">
       {/* Section Header*/}
       <SectionHeader
+        icon="weui:me-filled"
         headerButtonContent="About"
         sectionHeaderContent="Understanding My Approach and Experience"
       />

@@ -2,16 +2,18 @@ import HeaderButton from 'components/atoms/HeaderButton'
 interface HeaderButtonProps {
   headerButtonContent: string
   sectionHeaderContent: string
+  icon: string
 }
 
 export default function SectionHeader({
   headerButtonContent,
-  sectionHeaderContent
+  sectionHeaderContent,
+  icon
 }: HeaderButtonProps) {
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <HeaderButton icon="weui:me-filled" content={headerButtonContent} />
-      <div className="text-center font-montserratMedium text-xl text-textColor md:text-2xl">
+    <div className="flex max-w-[864px] flex-col items-center justify-center gap-4">
+      <HeaderButton icon={icon} content={headerButtonContent} />
+      <div className="text-center font-montserratMedium text-xl text-textColor md:text-3xl">
         {sectionHeaderContent}
       </div>
     </div>
