@@ -3,7 +3,7 @@ import HeroImage from '../../assets/Pic/HeroSection.png'
 
 export default function HeroSection() {
   return (
-    <div className="mx-auto mt-8 flex max-w-[1440px] flex-col items-center justify-between gap-8 px-3 md:flex-row-reverse 2xl:px-0">
+    <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-8 px-3 md:flex-row-reverse 2xl:px-0">
       <div className="px-4">
         <img src={HeroImage} className="md:scale-110 lg:scale-100" />
       </div>
