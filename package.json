@@ -20,6 +20,7 @@
     "prepare": "husky && husky install"
   },
   "dependencies": {
+    "@iconify/react": "^5.0.2",
     "@preline/collapse": "^2.4.1",
     "classnames": "^2.5.1",
     "commitlint": "^19.4.0",
