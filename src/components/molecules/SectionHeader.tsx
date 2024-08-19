@@ -11,7 +11,7 @@ export default function SectionHeader({
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <HeaderButton icon="weui:me-filled" content={headerButtonContent} />
-      <div className="text-center font-montserratMedium text-xl">
+      <div className="text-center font-montserratMedium text-xl text-textColor md:text-2xl">
         {sectionHeaderContent}
       </div>
     </div>
