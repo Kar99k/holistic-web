@@ -6,7 +6,7 @@ export default function Services() {
     <div className="mx-7 flex max-w-[1440px] flex-col items-center justify-center gap-5">
       {/* Section Header*/}
       <SectionHeader
-        icon=""
+        icon="mdi:talk"
         headerButtonContent="Services"
         sectionHeaderContent=" Providing compassionate support and professional guidance to enhance well-being."
       />
