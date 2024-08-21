@@ -4,6 +4,8 @@ import Stats from './organisms/Stats'
 import AboutMe from './organisms/AboutMe'
 import Services from './organisms/Services'
 import HowItWorks from './organisms/HowItWorks'
+import InputField from './atoms/InputField'
+import ContactUs from './organisms/ContactUs'
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <AboutMe />
       <Services />
       <HowItWorks />
+      <ContactUs />
     </div>
   )
 }
