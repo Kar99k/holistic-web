@@ -15,7 +15,7 @@ function HowItWorksCard({
 }: HowItWorksProps) {
   return (
     <div
-      className={classNames('flex gap-4 p-7 items-center', {
+      className={classNames('flex gap-8 p-7 items-center', {
         'flex-row-reverse': rowRev
       })}
     >
