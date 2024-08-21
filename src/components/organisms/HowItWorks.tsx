@@ -1,4 +1,4 @@
-import HowItWorksCard from 'components/atoms/howItWorksCard'
+import HowItWorksCard from 'components/atoms/HowItWorksCard'
 import SectionHeader from 'components/molecules/SectionHeader'
 
 export default function HowItWorks() {
