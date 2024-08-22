@@ -21,10 +21,9 @@
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
-    "@preline/collapse": "^2.4.1",
     "classnames": "^2.5.1",
     "commitlint": "^19.4.0",
-    "preline": "^2.4.1",
+    "framer-motion": "^11.3.29",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0",

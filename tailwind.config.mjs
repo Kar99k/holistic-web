@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-import prelinePlugin from 'preline/plugin'
 
 export default {
-  content: ['./src/**/*.{mjs,js,ts,jsx,tsx}', 'node_modules/preline/dist/*.js'],
+  content: ['./src/**/*.{mjs,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -25,5 +24,5 @@ export default {
     }
   },
   darkMode: 'class',
-  plugins: [prelinePlugin]
+  plugins: [require('@tailwindcss/forms')]
 }
