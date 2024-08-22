@@ -19,11 +19,6 @@ function HowItWorksCard({
         'flex-row-reverse': rowRev
       })}
     >
-      {/* <div className="flex flex-col items-center">
-        <div className="flex size-4 flex-row items-center rounded-xl bg-primary px-2 text-center font-montserratBold text-sm text-secondary"></div>
-        <div className="h-32 w-1 bg-secondary"></div>
-      </div> */}
-
       <div className="max-w-[340px]">
         <img src={img} className="rounded-xl " />
       </div>
