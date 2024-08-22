@@ -19,7 +19,7 @@ export default function HeroSection() {
           level! Our mouthwatering burgers are made from 100% beef and are
           served on freshly baked buns.
         </div>
-        <div className="mt-4">
+        <div className="mt-4 sm:w-[240px]">
           <PrimaryButton text="Book now" />
         </div>
       </div>
