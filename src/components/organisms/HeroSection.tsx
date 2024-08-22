@@ -1,7 +1,14 @@
 import PrimaryButton from 'components/atoms/PrimaryButton'
 import HeroImage from '../../assets/Pic/HeroSection.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function HeroSection() {
+  const navigate = useNavigate()
+
+  const handleNavigate = () => {
+    navigate(`/?scrollTo=service`)
+  }
+
   return (
     <div className="flex max-w-[1440px] flex-col items-center justify-between gap-8 px-3 md:flex-row-reverse 2xl:px-0">
       <div className="px-4">
@@ -20,7 +27,7 @@ export default function HeroSection() {
           served on freshly baked buns.
         </div>
         <div className="mt-4 sm:w-[240px]">
-          <PrimaryButton text="Book now" />
+          <PrimaryButton text="Book now" onClick={handleNavigate} />
         </div>
       </div>
     </div>

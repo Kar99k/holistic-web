@@ -1,5 +1,6 @@
 import PrimaryButton from 'components/atoms/PrimaryButton'
 import placeholder from '../../assets/Pic/placeholder.png'
+import { Link } from 'react-router-dom'
 interface ServiceCardProps {
   header: string
   content: string
@@ -17,9 +18,9 @@ export default function ServiceCard({ header, content }: ServiceCardProps) {
       <div className=" text-center font-montserratMedium text-sm italic text-textColor80 lg:text-xl">
         {content}
       </div>
-      <div className="w-full">
+      <Link className="w-full" to="/services">
         <PrimaryButton text="Learn more" />
-      </div>
+      </Link>
     </div>
   )
 }

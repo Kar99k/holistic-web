@@ -14,6 +14,7 @@ export default function HomePage() {
   const location = useLocation()
   const aboutMeRef = useRef<HTMLDivElement>(null)
   const contactUsRef = useRef<HTMLDivElement>(null)
+  const serviceRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const params = new URLSearchParams(location.search)
@@ -21,7 +22,8 @@ export default function HomePage() {
 
     const sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {
       aboutMe: aboutMeRef,
-      contact: contactUsRef
+      contact: contactUsRef,
+      service: serviceRef
     }
 
     if (section && sectionRefs[section]?.current) {
@@ -44,7 +46,10 @@ export default function HomePage() {
         <div ref={aboutMeRef}>
           <AboutMe />
         </div>
-        <Services />
+
+        <div ref={serviceRef}>
+          <Services />
+        </div>
         <HowItWorks />
         <div ref={contactUsRef}>
           <ContactUs />
