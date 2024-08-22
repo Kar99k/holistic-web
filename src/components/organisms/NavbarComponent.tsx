@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import classNames from 'classnames'
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 export default function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false)
-
+  const [dropdown, setDropdown] = useState(false)
   const handleToggle = () => {
     setIsOpen(!isOpen)
   }
@@ -49,12 +50,38 @@ export default function NavbarComponent() {
             >
               About
             </a>
-            <a
-              className="font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none "
-              href="#"
-            >
-              Services
-            </a>
+
+            <div className="">
+              <button
+                className="inline-flex items-center font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
+                onClick={() => {
+                  setDropdown(!dropdown)
+                }}
+              >
+                Services
+                <Icon
+                  icon="gridicons:dropdown"
+                  style={{
+                    color: '#3C1C55',
+                    marginTop: '-2px'
+                  }}
+                  className={classNames({ '-rotate-180': dropdown })}
+                  width="2em"
+                  height="2em"
+                />
+              </button>
+
+              <div
+                className={classNames(
+                  'absolute gap-2 rounded-xl bg-accent/80 p-4 text-secondary font-montserratSemiBold backdrop-blur-3xl',
+                  { hidden: !dropdown, 'flex flex-col': dropdown }
+                )}
+              >
+                <a href="#">🧑‍⚕️ Counseling Session</a>
+                <a href="#">🤗 Empathetic Listening</a>
+              </div>
+            </div>
+
             <a
               className="font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
               href="#"
