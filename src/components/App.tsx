@@ -1,8 +1,8 @@
-import HomePage from 'pages/HomePage'
+import AppRoutes from 'routes/AppRoutes'
 function App() {
   return (
     <div className="">
-      <HomePage />
+      <AppRoutes />
     </div>
   )
 }

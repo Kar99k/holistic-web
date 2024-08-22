@@ -7,8 +7,32 @@ import FAQ from 'components/organisms/FAQ'
 import Services from 'components/organisms/Services'
 import Stats from 'components/organisms/Stats'
 import HowItWorks from 'components/organisms/HowItWorks'
+import { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 
 export default function HomePage() {
+  const location = useLocation()
+  const aboutMeRef = useRef<HTMLDivElement>(null)
+  const contactUsRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search)
+    const section = params.get('scrollTo')
+
+    const sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {
+      aboutMe: aboutMeRef,
+      contact: contactUsRef
+    }
+
+    if (section && sectionRefs[section]?.current) {
+      sectionRefs[section].current.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    // Remove the query parameter after scrolling
+    const newUrl = window.location.pathname
+    window.history.replaceState(null, '', newUrl)
+  }, [location])
+
   return (
     <Fragment>
       <HCFTemplate>
@@ -17,10 +41,14 @@ export default function HomePage() {
           <Stats />
         </div>
 
-        <AboutMe />
+        <div ref={aboutMeRef}>
+          <AboutMe />
+        </div>
         <Services />
         <HowItWorks />
-        <ContactUs />
+        <div ref={contactUsRef}>
+          <ContactUs />
+        </div>
         <FAQ />
       </HCFTemplate>
     </Fragment>

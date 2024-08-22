@@ -1,8 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import classNames from 'classnames'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function NavbarComponent() {
+  const navigate = useNavigate()
+  const handleNavigate = (section: string) => {
+    navigate(`/?scrollTo=${section}`)
+  }
+
   const [isOpen, setIsOpen] = useState(false)
   const [dropdown, setDropdown] = useState(false)
   const handleToggle = () => {
@@ -13,12 +19,12 @@ export default function NavbarComponent() {
     <header className="mb-8 flex w-full flex-wrap bg-secondary p-3 text-sm sm:mb-24 sm:flex-nowrap sm:justify-start sm:py-6">
       <nav className="mx-auto w-full max-w-[1440px] px-4 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between">
-          <a
+          <Link
             className="flex-none text-xl font-semibold text-textColor hover:opacity-80 focus:opacity-80"
-            href="#"
+            to="/"
           >
             Holistic Care
-          </a>
+          </Link>
           <div className="sm:hidden">
             <button
               type="button"
@@ -38,20 +44,20 @@ export default function NavbarComponent() {
           )}
         >
           <div className="mt-5 flex flex-col gap-6 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:ps-5">
-            <a
+            <Link
               className="font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
-              href="#"
+              to="/"
             >
               Home
-            </a>
-            <a
-              className="font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
-              href="#"
+            </Link>
+            <div
+              className="cursor-pointer font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
+              onClick={() => handleNavigate('aboutMe')}
             >
               About
-            </a>
+            </div>
 
-            <div className="">
+            <Link to="/services">
               <button
                 className="inline-flex items-center font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
                 onClick={() => {
@@ -80,7 +86,7 @@ export default function NavbarComponent() {
                 <a href="#">🧑‍⚕️ Counseling Session</a>
                 <a href="#">🤗 Empathetic Listening</a>
               </div>
-            </div>
+            </Link>
 
             <a
               className="font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
@@ -88,12 +94,12 @@ export default function NavbarComponent() {
             >
               Resources
             </a>
-            <a
-              className="font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
-              href="#"
+            <div
+              className="cursor-pointer font-medium text-textColor hover:font-bold focus:font-bold focus:outline-none"
+              onClick={() => handleNavigate('contact')}
             >
               Contact
-            </a>
+            </div>
           </div>
         </div>
       </nav>

@@ -8,3 +8,7 @@ export interface ContentItem {
 interface contentProp {
   contents: ContentItem[]
 }
+
+interface NavbarComponentProps {
+  onNavItemClick: (section: 'aboutMe' | 'contact') => void
+}
