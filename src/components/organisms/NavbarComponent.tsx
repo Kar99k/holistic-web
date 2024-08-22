@@ -9,7 +9,7 @@ export default function NavbarComponent() {
   }
 
   return (
-    <header className="flex w-full flex-wrap bg-secondary p-3 text-sm sm:flex-nowrap sm:justify-start sm:py-6">
+    <header className="mb-8 flex w-full flex-wrap bg-secondary p-3 text-sm sm:mb-24 sm:flex-nowrap sm:justify-start sm:py-6">
       <nav className="mx-auto w-full max-w-[1440px] px-4 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between">
           <a

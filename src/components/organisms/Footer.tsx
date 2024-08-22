@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-secondary">
+    <footer className="mt-12 w-full bg-secondary">
       <div className="mx-auto flex max-w-screen-lg flex-row flex-wrap justify-center gap-4 p-4 sm:justify-between">
         <div className="flex justify-center gap-2">
           <Icon
